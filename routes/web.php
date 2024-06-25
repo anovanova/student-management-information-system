@@ -20,6 +20,10 @@ Route::get('/', function () {
     return Inertia::render('Auth/Login');
 });
 
+Route::get('/admin-dashboard', function () {
+    return Inertia::render('AdminDashboard');
+});
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
